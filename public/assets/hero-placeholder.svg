@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Cabana Collectives hero image">
+  <defs>
+    <linearGradient id="hero-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f8fb" />
+      <stop offset="50%" stop-color="#eef1f6" />
+      <stop offset="100%" stop-color="#dde4ee" />
+    </linearGradient>
+    <linearGradient id="hero-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7e7e7e" />
+      <stop offset="100%" stop-color="#9a9a9a" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#hero-bg)" />
+  <circle cx="220" cy="200" r="160" fill="#f1f3f8" />
+  <circle cx="980" cy="240" r="210" fill="#e4e9f2" />
+  <path d="M120 610 C 320 520, 560 540, 760 480 C 930 430, 1080 380, 1140 320" fill="none" stroke="#c5ccd8" stroke-width="2" opacity="0.7" />
+  <path d="M90 640 C 310 560, 540 570, 760 520 C 940 480, 1080 430, 1140 370" fill="none" stroke="#d4dae6" stroke-width="2" opacity="0.7" />
+  <rect x="110" y="470" width="980" height="230" rx="32" fill="#ffffff" opacity="0.92" />
+
+  <g transform="translate(200 520)">
+    <polygon points="0,0 460,0 500,150 0,150" fill="url(#hero-accent)" />
+    <text x="55" y="105" font-family="Montserrat, Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="6" fill="#ffffff">
+      CABANA
+    </text>
+  </g>
+  <text x="200" y="705" font-family="Source Sans Pro, Arial, sans-serif" font-size="26" fill="#4b5563">
+    Global consultancy, procurement, and trade execution
+  </text>
+  <g opacity="0.08" transform="translate(780 120) scale(0.7)">
+    <polygon points="0,0 460,0 500,150 0,150" fill="#7e7e7e" />
+    <text x="55" y="105" font-family="Montserrat, Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="6" fill="#ffffff">
+      CABANA
+    </text>
+  </g>
+</svg>

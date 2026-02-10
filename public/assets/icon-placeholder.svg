@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="Cabana Collectives icon">
+  <defs>
+    <linearGradient id="icon-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f6fb" />
+      <stop offset="100%" stop-color="#e2e7f0" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="64" fill="url(#icon-bg)" />
+  <circle cx="320" cy="90" r="60" fill="#edf1f7" />
+  <g transform="translate(50 130) scale(0.55)">
+    <polygon points="0,0 460,0 500,150 0,150" fill="#7e7e7e" />
+    <text x="55" y="105" font-family="Montserrat, Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="6" fill="#ffffff">
+      CABANA
+    </text>
+  </g>
+  <rect x="70" y="300" width="260" height="18" rx="9" fill="#d1d7e3" />
+  <rect x="110" y="330" width="180" height="12" rx="6" fill="#e2e7f0" />
+</svg>
