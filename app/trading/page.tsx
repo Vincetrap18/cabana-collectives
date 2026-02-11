@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import SectionIcon from '../../components/SectionIcon';
 
 export const metadata: Metadata = {
   title: 'Trading',
@@ -29,11 +31,14 @@ export default function TradingPage() {
             <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Inspection-led execution, compliance alignment, and accountable logistics for each shipment.
             </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Trade execution"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/global-trade.png"
+                alt="Global trade lanes and shipment oversight"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -41,7 +46,7 @@ export default function TradingPage() {
       <section className="section section-white" aria-labelledby="mandate-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Mandate icon" />
+            <SectionIcon name="mandate" />
             <h2 id="mandate-title" className="heading" style={{ fontSize: '1.8rem' }}>Trading Mandate</h2>
           </div>
           <p className="lead">
@@ -86,11 +91,14 @@ export default function TradingPage() {
           <div className="card">
             <h2 id="chemicals-title" className="heading" style={{ fontSize: '1.2rem' }}>Chemicals Supply</h2>
             <p className="lead">Compliance-led supply programs for industrial and specialty chemicals.</p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid var(--slate-200)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Chemicals supply"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/strategic-growth.png"
+                alt="Chemicals supply chain strategy"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
           <div className="fade-in">
             <p className="lead">
@@ -110,7 +118,7 @@ export default function TradingPage() {
         <div className="container grid-two">
           <div className="fade-in">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Risk control icon" />
+              <SectionIcon name="risk" />
               <h2 id="risk-title" className="heading" style={{ fontSize: '1.8rem' }}>Risk Controls</h2>
             </div>
             <p className="lead">
@@ -138,7 +146,7 @@ export default function TradingPage() {
       <section className="section section-white" aria-labelledby="finance-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Finance icon" />
+            <SectionIcon name="finance" />
             <h2 id="finance-title" className="heading" style={{ fontSize: '1.8rem' }}>Trade Finance & Logistics</h2>
           </div>
           <p className="lead">
