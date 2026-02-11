@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import SectionIcon from '../../components/SectionIcon';
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY } from '../../lib/contact';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -26,8 +27,8 @@ export default function ContactPage() {
             </p>
             <div style={{ marginTop: '1.5rem', display: 'grid', gap: '0.5rem' }}>
               <p className="text-muted"><strong className="heading" style={{ color: 'var(--ink)' }}>Headquarters:</strong> Kenya, Serving Global Markets</p>
-              <p className="text-muted"><strong className="heading" style={{ color: 'var(--ink)' }}>Email:</strong> info@cabanacollectives.com</p>
-              <p className="text-muted"><strong className="heading" style={{ color: 'var(--ink)' }}>Phone:</strong> +254 000 000 000</p>
+              <p className="text-muted"><strong className="heading" style={{ color: 'var(--ink)' }}>Email:</strong> {CONTACT_EMAIL}</p>
+              <p className="text-muted"><strong className="heading" style={{ color: 'var(--ink)' }}>Phone:</strong> {CONTACT_PHONE_DISPLAY}</p>
             </div>
           </div>
           <div className="banner">
