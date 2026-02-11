@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import SectionIcon from '../components/SectionIcon';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -49,8 +51,15 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="card-brand">
-            <img src="/assets/hero-placeholder.svg" alt="Global trade and logistics illustration" />
+          <div className="media-frame hero-media">
+            <div className="media-overlay" aria-hidden="true" />
+            <Image
+              src="/images/hero.png"
+              alt="Cabana Collectives global trade network"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 40vw"
+            />
           </div>
         </div>
       </section>
@@ -59,7 +68,7 @@ export default function HomePage() {
         <div className="container grid-two">
           <div className="fade-in">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Advisory icon" />
+              <SectionIcon name="advisory" />
               <h2 id="advisory-title" className="heading" style={{ fontSize: '1.8rem' }}>
                 Strategic Advisory & Trade Execution
               </h2>
@@ -110,21 +119,21 @@ export default function HomePage() {
           </div>
           <div className="grid-three" style={{ marginTop: '2.5rem' }}>
             <article className="card">
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Sourcing icon" />
+              <SectionIcon name="sourcing" />
               <h3 className="heading" style={{ marginTop: '1rem', fontSize: '1.1rem' }}>Sourcing & Procurement</h3>
               <p className="lead">
                 Strategic sourcing frameworks connecting verified suppliers to global buyer demand, with measurable procurement KPIs.
               </p>
             </article>
             <article className="card">
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Trading icon" />
+              <SectionIcon name="trading" />
               <h3 className="heading" style={{ marginTop: '1rem', fontSize: '1.1rem' }}>Commodity Trading & Chemicals</h3>
               <p className="lead">
                 Structured trading programs with inspection controls, compliant handling, and delivery assurance across corridors.
               </p>
             </article>
             <article className="card">
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Sustainability icon" />
+              <SectionIcon name="sustainability" />
               <h3 className="heading" style={{ marginTop: '1rem', fontSize: '1.1rem' }}>Sustainable Markets</h3>
               <p className="lead">
                 Responsible sourcing and future-focused product strategies for long-term supply resilience.
@@ -168,7 +177,7 @@ export default function HomePage() {
         <div className="container grid-two">
           <div className="fade-in">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Compliance icon" />
+              <SectionIcon name="compliance" />
               <h2 id="compliance-title" className="heading" style={{ fontSize: '1.8rem' }}>Compliance & Governance</h2>
             </div>
             <p className="lead">
@@ -214,11 +223,14 @@ export default function HomePage() {
             <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
               East Africa port access, COMESA and AfCFTA trade frameworks, and expanding Gulf and Asia supply routes provide dependable sourcing pathways.
             </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Regional trade map illustration"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/global-trade.png"
+                alt="Regional trade corridors across Africa, the Middle East, and Asia"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
         </div>
       </section>
