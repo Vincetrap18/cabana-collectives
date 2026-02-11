@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import SectionIcon from '../../components/SectionIcon';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -28,16 +30,22 @@ export default function ContactPage() {
               <p className="text-muted"><strong className="heading" style={{ color: 'var(--ink)' }}>Phone:</strong> +254 000 000 000</p>
             </div>
           </div>
-          <div className="card-brand">
-            <h2 className="heading" style={{ fontSize: '1.2rem' }}>Engagement Response</h2>
-            <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Expect confirmation within one business day and a structured action plan aligned to your sourcing objectives.
-            </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Engagement response"
+          <div className="banner">
+            <Image
+              src="/images/cabana-brand-coast.png"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="(max-width: 900px) 100vw, 40vw"
+              className="banner-image"
             />
+            <div className="banner-overlay" aria-hidden="true" />
+            <div className="banner-content">
+              <h2 className="heading" style={{ fontSize: '1.2rem', color: 'var(--white)' }}>Engagement Response</h2>
+              <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                Expect confirmation within one business day and a structured action plan aligned to your sourcing objectives.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -45,7 +53,7 @@ export default function ContactPage() {
       <section className="section section-white" aria-labelledby="engagement-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Engagement icon" />
+            <SectionIcon name="engagement" />
             <h2 id="engagement-title" className="heading" style={{ fontSize: '1.8rem' }}>Engagement Paths</h2>
           </div>
           <p className="lead">
@@ -81,7 +89,7 @@ export default function ContactPage() {
         <div className="container grid-two">
           <div className="fade-in">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Contact form icon" />
+              <SectionIcon name="contact" />
               <h2 id="form-title" className="heading" style={{ fontSize: '1.8rem' }}>Submit Your Request</h2>
             </div>
             <p className="lead">
