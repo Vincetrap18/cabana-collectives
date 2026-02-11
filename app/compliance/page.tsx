@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import SectionIcon from '../../components/SectionIcon';
 
 export const metadata: Metadata = {
   title: 'Compliance',
@@ -24,16 +26,22 @@ export default function CompliancePage() {
               Our governance team monitors documentation, inspection requirements, and customs compliance to ensure that trade execution remains audit-ready and transparent.
             </p>
           </div>
-          <div className="card-brand">
-            <h2 className="heading" style={{ fontSize: '1.2rem' }}>Governance Focus</h2>
-            <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Compliance alignment, documentation integrity, and risk controls across the trade lifecycle.
-            </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Governance framework"
+          <div className="banner">
+            <Image
+              src="/images/collage.png"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="(max-width: 900px) 100vw, 40vw"
+              className="banner-image"
             />
+            <div className="banner-overlay" aria-hidden="true" />
+            <div className="banner-content">
+              <h2 className="heading" style={{ fontSize: '1.2rem', color: 'var(--white)' }}>Governance Focus</h2>
+              <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                Compliance alignment, documentation integrity, and risk controls across the trade lifecycle.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -41,7 +49,7 @@ export default function CompliancePage() {
       <section className="section section-white" aria-labelledby="due-diligence-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Due diligence icon" />
+            <SectionIcon name="compliance" />
             <h2 id="due-diligence-title" className="heading" style={{ fontSize: '1.8rem' }}>Supplier Due Diligence</h2>
           </div>
           <p className="lead">
@@ -84,7 +92,7 @@ export default function CompliancePage() {
       <section className="section section-white" aria-labelledby="quality-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Quality assurance icon" />
+            <SectionIcon name="quality" />
             <h2 id="quality-title" className="heading" style={{ fontSize: '1.8rem' }}>Quality Assurance & Inspection</h2>
           </div>
           <p className="lead">
