@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import SectionIcon from '../../components/SectionIcon';
 
 export const metadata: Metadata = {
   title: 'Sustainability',
@@ -29,11 +31,14 @@ export default function SustainabilityPage() {
             <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Responsible sourcing, circular materials, and ESG-aligned governance across supply chains.
             </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Sustainability focus"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/sustainability.png"
+                alt="Sustainable supply initiatives and ESG-aligned trade"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -41,7 +46,7 @@ export default function SustainabilityPage() {
       <section className="section section-white" aria-labelledby="responsible-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Responsible sourcing icon" />
+            <SectionIcon name="responsible" />
             <h2 id="responsible-title" className="heading" style={{ fontSize: '1.8rem' }}>Responsible Sourcing</h2>
           </div>
           <p className="lead">
@@ -84,7 +89,7 @@ export default function SustainabilityPage() {
       <section className="section section-white" aria-labelledby="esg-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="ESG alignment icon" />
+            <SectionIcon name="esg" />
             <h2 id="esg-title" className="heading" style={{ fontSize: '1.8rem' }}>Climate & ESG Alignment</h2>
           </div>
           <p className="lead">
