@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import SectionIcon from '../../components/SectionIcon';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -28,11 +30,14 @@ export default function AboutPage() {
             <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Nairobi-based teams coordinate supply across East Africa, the Middle East, and Asia, supported by trusted logistics and inspection partners.
             </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Cabana Collectives regional network"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/team.png"
+                alt="Cabana Collectives leadership and advisory team"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -40,7 +45,7 @@ export default function AboutPage() {
       <section className="section section-white" aria-labelledby="mission-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Mission icon" />
+            <SectionIcon name="mission" />
             <h2 id="mission-title" className="heading" style={{ fontSize: '1.8rem' }}>Mission & Principles</h2>
           </div>
           <p className="lead">
@@ -70,7 +75,7 @@ export default function AboutPage() {
         <div className="container grid-two">
           <div className="fade-in">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Market position icon" />
+              <SectionIcon name="market" />
               <h2 id="market-title" className="heading" style={{ fontSize: '1.8rem' }}>Market Position & Network</h2>
             </div>
             <p className="lead">
@@ -95,7 +100,7 @@ export default function AboutPage() {
       <section className="section" aria-labelledby="leadership-title">
         <div className="container fade-in">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Leadership icon" />
+            <SectionIcon name="leadership" />
             <h2 id="leadership-title" className="heading" style={{ fontSize: '1.8rem' }}>Leadership & Advisory Bench</h2>
           </div>
           <p className="lead">
