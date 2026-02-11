@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import SectionIcon from '../../components/SectionIcon';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -37,11 +39,14 @@ export default function ServicesPage() {
             <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Structured procurement programs that align buyer requirements with verified supplier capacity and market pricing benchmarks.
             </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Procurement programs"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/strategic-growth.png"
+                alt="Strategic sourcing and procurement growth planning"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
           <div className="fade-in">
             <p className="lead">
@@ -61,7 +66,7 @@ export default function ServicesPage() {
         <div className="container grid-two">
           <div className="fade-in">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Trading icon" />
+              <SectionIcon name="trading" />
               <h2 id="trading-title" className="heading" style={{ fontSize: '1.8rem' }}>Commodity Trading</h2>
             </div>
             <p className="lead">
@@ -93,11 +98,14 @@ export default function ServicesPage() {
             <p className="lead">
               Compliance-led chemicals sourcing with safe handling protocols and documentation integrity.
             </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid var(--slate-200)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Chemicals supply"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/global-trade.png"
+                alt="Chemicals logistics and global trade coordination"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
           <div className="fade-in">
             <p className="lead">
@@ -117,7 +125,7 @@ export default function ServicesPage() {
         <div className="container grid-two">
           <div className="fade-in">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img className="section-icon" src="/assets/icon-placeholder.svg" alt="Industrial materials icon" />
+              <SectionIcon name="industrial" />
               <h2 id="materials-title" className="heading" style={{ fontSize: '1.8rem' }}>Industrial Materials & Real Estate Support</h2>
             </div>
             <p className="lead">
@@ -148,11 +156,14 @@ export default function ServicesPage() {
             <p className="lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Responsible sourcing and emerging market support for clients seeking future-ready supply chains.
             </p>
-            <img
-              style={{ marginTop: '1.25rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.2)' }}
-              src="/assets/section-placeholder.svg"
-              alt="Sustainable markets"
-            />
+            <div className="media-frame" style={{ marginTop: '1.25rem' }}>
+              <Image
+                src="/images/sustainability.png"
+                alt="Sustainable supply chain planning and responsible sourcing"
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
           </div>
           <div className="fade-in">
             <p className="lead">
